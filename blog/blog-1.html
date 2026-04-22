@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Getting Started with Modern CSS - Blog post">
+  <title>Getting Started with Modern CSS — Your Name</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .blog-post {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+    .blog-post-header {
+      margin-bottom: 3rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .blog-post h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+    .blog-post-content h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--accent);
+    }
+    .blog-post-content p {
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+    .blog-post-content code {
+      background: var(--bg-accent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9em;
+    }
+    .blog-post-content pre {
+      background: var(--bg-accent);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .blog-post-content pre code {
+      background: none;
+      padding: 0;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">&lt;YN /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#portfolio">Portfolio</a></li>
+        <li><a href="../index.html#blog">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon light">&#9728;</span>
+        <span class="theme-icon dark">&#9790;</span>
+      </button>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <article class="blog-post">
+      <a href="../index.html#blog" class="back-link">&larr; Back to all posts</a>
+      <header class="blog-post-header">
+        <div class="blog-post-meta">
+          <time datetime="2024-03-15">March 15, 2024</time>
+          <span>5 min read</span>
+          <span class="blog-category" style="background: var(--tag-bg); padding: 0.2rem 0.6rem; border-radius: 4px; color: var(--accent);">Development</span>
+        </div>
+        <h1>Getting Started with Modern CSS</h1>
+      </header>
+      <div class="blog-post-content">
+        <p>CSS has evolved tremendously in recent years. Features that once required JavaScript or complex hacks are now built right into the browser. Let's explore some of the most exciting modern CSS capabilities.</p>
+
+        <h2>CSS Grid Layout</h2>
+        <p>CSS Grid provides a two-dimensional layout system that makes complex designs straightforward. Combine it with <code>minmax()</code> and <code>auto-fit</code> for responsive layouts without media queries:</p>
+
+        <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}</code></pre>
+
+        <h2>Custom Properties</h2>
+        <p>CSS custom properties (variables) enable theming and dynamic styling without preprocessor tools. They cascade and can be updated with JavaScript, making them perfect for dark mode implementations.</p>
+
+        <h2>Container Queries</h2>
+        <p>Unlike media queries that respond to viewport size, container queries let components adapt based on their parent container's dimensions. This is a game-changer for reusable component libraries.</p>
+
+        <p>The future of CSS is bright. Keep experimenting and building!</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Your Name. Built with care and creativity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
